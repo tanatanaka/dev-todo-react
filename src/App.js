@@ -52,10 +52,10 @@ const App = () => {
     }
     // フォームの内容を元に戻す
     setAddTodo("");
+    console.log(todos)
   };
 
   // todoリストから削除する関数
-  // ここの id という引数がよく分からない
   const handleDeleteClick = (id) => {
     // 削除条件に一致しないtodoを返す
     const removeItem = todos.filter(todo => todo.id !== id);
@@ -67,7 +67,6 @@ const App = () => {
   const handleEditInputChange = (e) => {
     // 新しい状態値を編集入力ボックスの現在の値に設定
     setCurrentTodo({ ...currentTodo, text: e.target.value });
-    console.log(currentTodo)
   }
 
 
@@ -81,7 +80,7 @@ const App = () => {
   const handleEditClick = (todo) => {
     setIsEdit(true);
     // 選択されたtodoの項目をcurrentTodoに設定する
-    setCurrentTodo({ ...addTodo });
+    setCurrentTodo({ ...todo });
 
   };
 
