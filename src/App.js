@@ -74,7 +74,7 @@ const App = () => {
   //編集したフォームが送信された時に更新する関数 
   const handleEditFormSubmit = (e) => {
     e.preventDefault();
-    handleUpdateTodo(currentTodo.id, CurrentTodo)
+    handleUpdateTodo(currentTodo.id, currentTodo)
   };
 
   // 編集ボタンがクリックされたときに処理する関数
